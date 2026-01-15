@@ -17,12 +17,10 @@ CAPRI-NAS introduces three pillars of sustainable architecture search:
 * **♻️ Sophisticated Parameter Inheritance:** A novel weight transfer system that analyzes layer compatibility (matching signatures, dimensions, and operations) between parent and child architectures. By copying trained weights rather than initializing randomly, this mechanism accelerates convergence by 60-80%.
 
 
-* 
-**⚖️ Multi-Objective Carbon-Aware Fitness:** Unlike traditional NAS that optimizes solely for accuracy, our fitness function balances three competing objectives: Validation Accuracy, Carbon Footprint (via CodeCarbon), and Parameter Reuse Score.
+* **⚖️ Multi-Objective Carbon-Aware Fitness:** Unlike traditional NAS that optimizes solely for accuracy, our fitness function balances three competing objectives: Validation Accuracy, Carbon Footprint (via CodeCarbon), and Parameter Reuse Score.
 
 
-* 
-**🧬 Adaptive Evolutionary Search:** An efficient evolutionary engine employing tournament selection, elitism, and early termination of underperforming candidates to minimize wasted computation.
+* **🧬 Adaptive Evolutionary Search:** An efficient evolutionary engine employing tournament selection, elitism, and early termination of underperforming candidates to minimize wasted computation.
 
 
 
@@ -86,16 +84,13 @@ The core optimization logic is defined by:
 
 The framework was validated on three critical application domains:
 
-* 
-**Academic Citation Networks**: Cora, CiteSeer, PubMed.
+* **Academic Citation Networks**: Cora, CiteSeer, PubMed.
 
 
-* 
-**E-Commerce Product Networks**: Amazon-Photo, Amazon-Computers.
+* **E-Commerce Product Networks**: Amazon-Photo, Amazon-Computers.
 
 
-* 
-**Bio-Molecular Graphs**: MUTAG, PROTEINS, ENZYMES, NCI1.
+* **Bio-Molecular Graphs**: MUTAG, PROTEINS, ENZYMES, NCI1.
 
 
 
