@@ -63,9 +63,7 @@ The CAPRI-NAS pipeline operates through a modular evolutionary loop:
 
 ### Fitness Function
 
-The core optimization logic is defined by:
-
-Validation Accuracy (). Normalized Carbon Emissions (), Parameter Reuse Score ().
+The core optimization logic is defined by: Validation Accuracy (), Normalized Carbon Emissions (), Parameter Reuse Score ().
 
 
 
