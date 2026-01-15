@@ -44,7 +44,7 @@ Evaluated across **9 diverse graph datasets**, CAPRI-NAS demonstrated that Green
  |
 | **Specialization** | <br>**31.6%** accuracy gain on ENZYMES dataset compared to GIN baseline.
 
- |
+ 
 
 ## 🛠️ System Architecture
 
@@ -72,11 +72,7 @@ The CAPRI-NAS pipeline operates through a modular evolutionary loop:
 
 The core optimization logic is defined by:
 
-****: Validation Accuracy ().
-
-****: Normalized Carbon Emissions ().
-
-****: Parameter Reuse Score ().
+Validation Accuracy (). Normalized Carbon Emissions (), Parameter Reuse Score ().
 
 
 
