@@ -28,24 +28,18 @@ CAPRI-NAS introduces three pillars of sustainable architecture search:
 
 Evaluated across **9 diverse graph datasets**, CAPRI-NAS demonstrated that Green AI does not require sacrificing performance.
 
-| Metric | Result |
-| --- | --- |
-| **Win Rate** | Outperformed or matched baselines on **77.8%** of datasets.
+Metric	                                  Result
+Win Rate	            Outperformed or matched baselines on 77.8% of datasets.
 
- |
-| **Carbon Efficiency** | Achieved an average **1.44x reduction** in CO₂ emissions vs. complex baselines.
+Carbon Efficiency	   Achieved an average 1.44x reduction in CO₂ emissions vs. complex baselines.
 
- |
-| **Search Speed** | Complete architecture search per dataset in **30-45 minutes** (Total <6 hours for all 9 datasets).
+Search Speed	        Complete architecture search per dataset in 30-45 minutes (Total <6 hours for all 9 datasets).
 
- |
-| **Top Result** | <br>**1.92x** carbon reduction on Amazon-Computers with **91.38%** accuracy (vs. 89.10% baseline).
+Top Result	          1.92x carbon reduction on Amazon-Computers with 91.38% accuracy (vs. 89.10% baseline).
 
- |
-| **Specialization** | <br>**31.6%** accuracy gain on ENZYMES dataset compared to GIN baseline.
+Specialization	      31.6% accuracy gain on ENZYMES dataset compared to GIN baseline.
 
  
-
 ## 🛠️ System Architecture
 
 The CAPRI-NAS pipeline operates through a modular evolutionary loop:
