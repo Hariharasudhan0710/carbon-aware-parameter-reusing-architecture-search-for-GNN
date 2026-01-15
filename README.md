@@ -59,16 +59,15 @@ The CAPRI-NAS pipeline operates through a modular evolutionary loop:
 
 
 3. **Evolutionary Cycle**:
-* 
-**Selection**: Tournament-based parent selection.
 
-**Mutation**: Applies stochastic changes (e.g., layer substitution, dimension modification).
+    (i) **Selection**: Tournament-based parent selection.
 
-**Inheritance**: Transfers weights from parents to compatible layers in child models.
+   (ii) **Mutation**: Applies stochastic changes (e.g., layer substitution, dimension modification).
+
+   (iii) **Inheritance**: Transfers weights from parents to compatible layers in child models.
 
 
-4. 
-**Carbon Tracking**: Real-time emission tracking for every candidate evaluation using **CodeCarbon**.
+4. **Carbon Tracking**: Real-time emission tracking for every candidate evaluation using **CodeCarbon**.
 
 
 ### Fitness Function
