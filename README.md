@@ -87,10 +87,7 @@ The framework was validated on three critical application domains:
 
 * **Language**: Python
 * **Deep Learning**: PyTorch, PyTorch Geometric (implied context)
-* 
-**Sustainability Tracking**: [CodeCarbon](https://codecarbon.io/) 
-
-
+* **Sustainability Tracking**: [CodeCarbon](https://codecarbon.io/) 
 * **Architecture**: Custom Evolutionary Algorithm
 
 ---
