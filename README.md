@@ -1,56 +1,128 @@
-# carbon-aware-parameter-reusing-architecture-search-for-GNN
-Neural Architecture Search Implementation
-This repository contains an implementation of neural architecture search (NAS) for automating the design of deep neural network architectures. The project defines a configurable search space, a pluggable search strategy, and an evaluation pipeline to explore candidate models efficiently under compute and accuracy constraints.
-​
+Here is a detailed **README.md** structure for your GitHub profile, strictly based on the technical details, methodology, and results provided in your uploaded project report.
 
-Features
-Modular search space definition (operations, connectivity, and hyperparameters) so you can quickly adapt NAS to new datasets or tasks like classification or detection.
-​
+You can copy and paste the Markdown below directly into your repository.
 
-Pluggable search strategies (e.g., random search, reinforcement learning, or evolutionary search) for exploring architectures.
-​
+---
 
-Re-usable training and evaluation loop with support for early stopping or low-fidelity training to speed up the search process.
-​
+# CAPRI-NAS: Carbon-Aware Parameter-Reusing Neural Architecture Search for GNNs
 
-Simple configuration-driven experiments via YAML/JSON configs for search, training, and evaluation settings.
-​
+**CAPRI-NAS** (Carbon-Aware Parameter-Reusing Intelligent Neural Architecture Search) is a novel framework that fundamentally redefines Graph Neural Network (GNN) architecture discovery by integrating environmental sustainability directly with performance optimization.
 
-Project Structure
-search/: Search algorithms (controller, evolutionary loop, or other searchers).
-​
+Addressing the "Red AI" problem of unsustainable computational costs, this framework utilizes evolutionary algorithms to discover architectures that are not only competitive with state-of-the-art baselines but also significantly more carbon-efficient.
 
-models/: Search space definition and model-building utilities for candidate architectures.
-​
+## 🚀 Key Innovations
 
-trainer/ or train.py: Scripts for training and validating sampled architectures.
-​
+CAPRI-NAS introduces three pillars of sustainable architecture search:
 
-configs/: Example configuration files for different datasets and search settings.
-​
+* **♻️ Sophisticated Parameter Inheritance:** A novel weight transfer system that analyzes layer compatibility (matching signatures, dimensions, and operations) between parent and child architectures. By copying trained weights rather than initializing randomly, this mechanism accelerates convergence by 60-80%.
 
-scripts/: Helper scripts for running experiments and reproducing results.
-​
 
-Installation
-Clone this repository and install the Python dependencies listed in requirements.txt using your preferred environment manager.
-​
+* 
+**⚖️ Multi-Objective Carbon-Aware Fitness:** Unlike traditional NAS that optimizes solely for accuracy, our fitness function balances three competing objectives: Validation Accuracy, Carbon Footprint (via CodeCarbon), and Parameter Reuse Score.
 
-Ensure compatible versions of the deep learning framework (e.g., PyTorch) and CUDA are installed if using GPU acceleration.
-​
 
-Usage
-Define or edit a configuration file in configs/ to set dataset paths, search space, and search strategy parameters.
-​
+* 
+**🧬 Adaptive Evolutionary Search:** An efficient evolutionary engine employing tournament selection, elitism, and early termination of underperforming candidates to minimize wasted computation.
 
-Run the search script, e.g. python search.py --config configs/experiment.yaml, to start NAS and log candidate architectures and metrics.
-​
 
-Use the best discovered architecture ID or config to fully train the final model with train.py.
-​
 
-Reproducibility
-All main experiments can be reproduced by running the provided configuration files and scripts in the order documented under the Usage section.
-​
+## 📊 Performance Highlights
 
-Random seeds and key hyperparameters are stored in configs and logged alongside results for easier replication and ablation studies.
+Evaluated across **9 diverse graph datasets**, CAPRI-NAS demonstrated that Green AI does not require sacrificing performance.
+
+| Metric | Result |
+| --- | --- |
+| **Win Rate** | Outperformed or matched baselines on **77.8%** of datasets.
+
+ |
+| **Carbon Efficiency** | Achieved an average **1.44x reduction** in CO₂ emissions vs. complex baselines.
+
+ |
+| **Search Speed** | Complete architecture search per dataset in **30-45 minutes** (Total <6 hours for all 9 datasets).
+
+ |
+| **Top Result** | <br>**1.92x** carbon reduction on Amazon-Computers with **91.38%** accuracy (vs. 89.10% baseline).
+
+ |
+| **Specialization** | <br>**31.6%** accuracy gain on ENZYMES dataset compared to GIN baseline.
+
+ |
+
+## 🛠️ System Architecture
+
+The CAPRI-NAS pipeline operates through a modular evolutionary loop:
+
+1. 
+**Search Space Definition**: Explores combinations of GCN, GAT, and GraphSAGE layers with varying activations (ReLU, GELU, etc.), normalization (BatchNorm, LayerNorm), and pooling strategies.
+
+
+2. 
+**Initialization**: Starts with a population of 20 random architectures.
+
+
+3. **Evolutionary Cycle**:
+* 
+**Selection**: Tournament-based parent selection.
+
+
+* 
+**Mutation**: Applies stochastic changes (e.g., layer substitution, dimension modification).
+
+
+* 
+**Inheritance**: Transfers weights from parents to compatible layers in child models.
+
+
+
+
+4. 
+**Carbon Tracking**: Real-time emission tracking for every candidate evaluation using **CodeCarbon**.
+
+
+
+### Fitness Function
+
+The core optimization logic is defined by:
+
+
+* 
+****: Validation Accuracy ().
+
+
+* 
+****: Normalized Carbon Emissions ().
+
+
+* 
+****: Parameter Reuse Score ().
+
+
+
+## 📂 Datasets
+
+The framework was validated on three critical application domains:
+
+* 
+**Academic Citation Networks**: Cora, CiteSeer, PubMed.
+
+
+* 
+**E-Commerce Product Networks**: Amazon-Photo, Amazon-Computers.
+
+
+* 
+**Bio-Molecular Graphs**: MUTAG, PROTEINS, ENZYMES, NCI1.
+
+
+
+## 💻 Tech Stack
+
+* **Language**: Python
+* **Deep Learning**: PyTorch, PyTorch Geometric (implied context)
+* 
+**Sustainability Tracking**: [CodeCarbon](https://codecarbon.io/) 
+
+
+* **Architecture**: Custom Evolutionary Algorithm
+
+---
