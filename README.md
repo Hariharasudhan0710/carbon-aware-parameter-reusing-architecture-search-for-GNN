@@ -52,48 +52,33 @@ Evaluated across **9 diverse graph datasets**, CAPRI-NAS demonstrated that Green
 
 The CAPRI-NAS pipeline operates through a modular evolutionary loop:
 
-1. 
-**Search Space Definition**: Explores combinations of GCN, GAT, and GraphSAGE layers with varying activations (ReLU, GELU, etc.), normalization (BatchNorm, LayerNorm), and pooling strategies.
+1. **Search Space Definition**: Explores combinations of GCN, GAT, and GraphSAGE layers with varying activations (ReLU, GELU, etc.), normalization (BatchNorm, LayerNorm), and pooling strategies.
 
 
-2. 
-**Initialization**: Starts with a population of 20 random architectures.
+2. **Initialization**: Starts with a population of 20 random architectures.
 
 
 3. **Evolutionary Cycle**:
 * 
 **Selection**: Tournament-based parent selection.
 
-
-* 
 **Mutation**: Applies stochastic changes (e.g., layer substitution, dimension modification).
 
-
-* 
 **Inheritance**: Transfers weights from parents to compatible layers in child models.
-
-
 
 
 4. 
 **Carbon Tracking**: Real-time emission tracking for every candidate evaluation using **CodeCarbon**.
 
 
-
 ### Fitness Function
 
 The core optimization logic is defined by:
 
-
-* 
 ****: Validation Accuracy ().
 
-
-* 
 ****: Normalized Carbon Emissions ().
 
-
-* 
 ****: Parameter Reuse Score ().
 
 
